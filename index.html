@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Content Creator Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>GAMER<span>ZONE</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#stream">Stream</a></li>
+                    <li><a href="#content">Content</a></li>
+                    <li><a href="#setup">Setup</a></li>
+                    <li><a href="#schedule">Schedule</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Welcome to My Gaming Universe</h1>
+                <p>Streams, Videos, and Epic Gaming Content</p>
+                <div class="live-status" id="liveStatus">
+                    <span class="offline">OFFLINE</span>
+                </div>
+                <div class="social-quick-links">
+                    <a href="https://twitch.tv/yourusername" target="_blank"><i class="fab fa-twitch"></i></a>
+                    <a href="https://youtube.com/@yourusername" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://tiktok.com/@yourusername" target="_blank"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="/api/placeholder/400/400" alt="Gamer Profile Picture">
+                </div>
+                <div class="about-text">
+                    <p>Hey there! I'm a passionate gamer dedicated to creating entertaining content and building an awesome community. I primarily focus on competitive gameplay in Call of Duty: Black Ops 6 and Rocket League, but I also enjoy exploring other titles!</p>
+                    <p>My stream is all about having fun while pushing for those wins. Whether you're here for the gameplay, the laughs, or just to hang out - welcome to the community!</p>
+                    <div class="game-tags">
+                        <span>Black Ops 6</span>
+                        <span>Rocket League</span>
+                        <span>FPS</span>
+                        <span>Competitive</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stream" class="stream">
+        <div class="container">
+            <h2>Live Stream</h2>
+            <div class="stream-container">
+                <div class="twitch-embed" id="twitchEmbed">
+                    <!-- Twitch embed will be loaded here via JavaScript -->
+                    <div class="placeholder-stream">
+                        <img src="/api/placeholder/800/450" alt="Stream Placeholder">
+                        <div class="placeholder-text">
+                            <i class="fas fa-tv"></i>
+                            <p>Stream is currently offline. Check the schedule below for my next stream!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="content" class="content">
+        <div class="container">
+            <h2>Latest Content</h2>
+            <div class="content-tabs">
+                <button class="tab-btn active" data-platform="youtube">YouTube</button>
+                <button class="tab-btn" data-platform="tiktok">TikTok</button>
+            </div>
+            <div class="content-grid" id="contentGrid">
+                <!-- Content items will be loaded here via JavaScript -->
+                <div class="content-item youtube">
+                    <div class="thumbnail">
+                        <img src="/api/placeholder/320/180" alt="Video Thumbnail">
+                        <span class="duration">10:23</span>
+                        <div class="overlay">
+                            <i class="fab fa-youtube play-icon"></i>
+                        </div>
+                    </div>
+                    <div class="content-info">
+                        <h3>Epic BO6 Gameplay - 30 Kill Streak!</h3>
+                        <p>3 days ago • 13K views</p>
+                    </div>
+                </div>
+                <div class="content-item youtube">
+                    <div class="thumbnail">
+                        <img src="/api/placeholder/320/180" alt="Video Thumbnail">
+                        <span class="duration">15:47</span>
+                        <div class="overlay">
+                            <i class="fab fa-youtube play-icon"></i>
+                        </div>
+                    </div>
+                    <div class="content-info">
+                        <h3>Rocket League Tournament Finals</h3>
+                        <p>1 week ago • 8.5K views</p>
+                    </div>
+                </div>
+                <div class="content-item youtube">
+                    <div class="thumbnail">
+                        <img src="/api/placeholder/320/180" alt="Video Thumbnail">
+                        <span class="duration">8:12</span>
+                        <div class="overlay">
+                            <i class="fab fa-youtube play-icon"></i>
+                        </div>
+                    </div>
+                    <div class="content-info">
+                        <h3>New Gaming Setup Reveal!</h3>
+                        <p>2 weeks ago • 25K views</p>
+                    </div>
+                </div>
+                <div class="content-item tiktok" style="display: none;">
+                    <div class="thumbnail tiktok-thumb">
+                        <img src="/api/placeholder/180/320" alt="TikTok Thumbnail">
+                        <div class="overlay">
+                            <i class="fab fa-tiktok play-icon"></i>
+                        </div>
+                    </div>
+                    <div class="content-info">
+                        <h3>Insane Rocket League Goal 🚀</h3>
+                        <p>2 days ago • 45K views</p>
+                    </div>
+                </div>
+                <div class="content-item tiktok" style="display: none;">
+                    <div class="thumbnail tiktok-thumb">
+                        <img src="/api/placeholder/180/320" alt="TikTok Thumbnail">
+                        <div class="overlay">
+                            <i class="fab fa-tiktok play-icon"></i>
+                        </div>
+                    </div>
+                    <div class="content-info">
+                        <h3>How I Won This 1v3 😱</h3>
+                        <p>5 days ago • 112K views</p>
+                    </div>
+                </div>
+                <div class="content-item tiktok" style="display: none;">
+                    <div class="thumbnail tiktok-thumb">
+                        <img src="/api/placeholder/180/320" alt="TikTok Thumbnail">
+                        <div class="overlay">
+                            <i class="fab fa-tiktok play-icon"></i>
+                        </div>
+                    </div>
+                    <div class="content-info">
+                        <h3>Gaming Setup Tour #gaming</h3>
+                        <p>1 week ago • 78K views</p>
+                    </div>
+                </div>
+            </div>
+            <div class="view-more">
+                <a href="#" class="btn">View More Content</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="setup" class="setup">
+        <div class="container">
+            <h2>My Gaming Setup</h2>
+            <div class="setup-content">
+                <div class="setup-image">
+                    <img src="/api/placeholder/600/400" alt="Gaming Setup">
+                </div>
+                <div class="setup-specs">
+                    <div class="spec-item">
+                        <i class="fas fa-microchip"></i>
+                        <div class="spec-info">
+                            <h3>CPU</h3>
+                            <p>13th Gen Intel® Core™ i7-13700KF</p>
+                        </div>
+                    </div>
+                    <div class="spec-item">
+                        <i class="fas fa-palette"></i>
+                        <div class="spec-info">
+                            <h3>GPU</h3>
+                            <p>NVIDIA GeForce RTX 4070</p>
+                        </div>
+                    </div>
+                    <div class="spec-item">
+                        <i class="fas fa-headset"></i>
+                        <div class="spec-info">
+                            <h3>Headset</h3>
+                            <p>Logitech G37 Gaming Headset</p>
+                        </div>
+                    </div>
+                    <div class="spec-item">
+                        <i class="fas fa-mouse"></i>
+                        <div class="spec-info">
+                            <h3>Mouse</h3>
+                            <p>Razer Cobra</p>
+                        </div>
+                    </div>
+                    <div class="spec-item">
+                        <i class="fas fa-memory"></i>
+                        <div class="spec-info">
+                            <h3>RAM</h3>
+                            <p>32GB DDR5 5600MHz</p>
+                        </div>
+                    </div>
+                    <div class="spec-item">
+                        <i class="fas fa-hdd"></i>
+                        <div class="spec-info">
+                            <h3>Storage</h3>
+                            <p>2TB NVMe SSD</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="schedule" class="schedule">
+        <div class="container">
+            <h2>Stream Schedule</h2>
+            <div class="schedule-grid">
+                <div class="schedule-day">
+                    <h3>Monday</h3>
+                    <div class="time-slot">
+                        <span class="time">7:00 PM - 10:00 PM</span>
+                        <span class="game">Black Ops 6</span>
+                    </div>
+                </div>
+                <div class="schedule-day">
+                    <h3>Tuesday</h3>
+                    <div class="time-slot">
+                        <span class="time">OFF</span>
+                    </div>
+                </div>
+                <div class="schedule-day">
+                    <h3>Wednesday</h3>
+                    <div class="time-slot">
+                        <span class="time">7:00 PM - 10:00 PM</span>
+                        <span class="game">Rocket League</span>
+                    </div>
+                </div>
+                <div class="schedule-day">
+                    <h3>Thursday</h3>
+                    <div class="time-slot">
+                        <span class="time">8:00 PM - 11:00 PM</span>
+                        <span class="game">Black Ops 6</span>
+                    </div>
+                </div>
+                <div class="schedule-day">
+                    <h3>Friday</h3>
+                    <div class="time-slot">
+                        <span class="time">9:00 PM - 1:00 AM</span>
+                        <span class="game">Mixed Games</span>
+                    </div>
+                </div>
+                <div class="schedule-day">
+                    <h3>Saturday</h3>
+                    <div class="time-slot">
+                        <span class="time">3:00 PM - 8:00 PM</span>
+                        <span class="game">Tournament Day</span>
+                    </div>
+                </div>
+                <div class="schedule-day">
+                    <h3>Sunday</h3>
+                    <div class="time-slot">
+                        <span class="time">OFF</span>
+                    </div>
+                </div>
+            </div>
+            <div class="timezone">
+                <p>All times are in <span id="timezone">EST</span></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Connect With Me</h2>
+            <div class="social-links">
+                <a href="https://twitch.tv/yourusername" target="_blank" class="social-link twitch">
+                    <i class="fab fa-twitch"></i>
+                    <span>Twitch</span>
+                </a>
+                <a href="https://youtube.com/@yourusername" target="_blank" class="social-link youtube">
+                    <i class="fab fa-youtube"></i>
+                    <span>YouTube</span>
+                </a>
+                <a href="https://tiktok.com/@yourusername" target="_blank" class="social-link tiktok">
+                    <i class="fab fa-tiktok"></i>
+                    <span>TikTok</span>
+                </a>
+                <a href="https://twitter.com/yourusername" target="_blank" class="social-link twitter">
+                    <i class="fab fa-twitter"></i>
+                    <span>Twitter</span>
+                </a>
+                <a href="https://discord.gg/yourinvite" target="_blank" class="social-link discord">
+                    <i class="fab fa-discord"></i>
+                    <span>Discord</span>
+                </a>
+                <a href="https://instagram.com/yourusername" target="_blank" class="social-link instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+            </div>
+            <div class="contact-form">
+                <h3>Send Me a Message</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn submit-btn">Send Message</button>
+                </form>
+                <div id="formSuccess" class="form-success">
+                    <i class="fas fa-check-circle"></i>
+                    <p>Message sent successfully!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>GAMER<span>ZONE</span></h2>
+                </div>
+                <div class="footer-text">
+                    <p>&copy; <span id="currentYear">2025</span> Gaming Content Creator. All Rights Reserved.</p>
+                </div>
+                <div class="footer-back-top">
+                    <a href="#" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
